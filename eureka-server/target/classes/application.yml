@@ -1,0 +1,16 @@
+server:
+  port: 10001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false  #��������Ŀǰ������Ӧ����һ������ע�����ģ���������ͨ��Ӧ�ã�Ĭ������£����Ӧ�û���ע�����ģ�Ҳ�����Լ���ע�����Լ�������Ϊfalse��ʾ��ֹ����Ĭ����Ϊ
+    fetch-registry: false #��ʾ��ȥ���������ķ�����Ϊ����ע�����ı����ְ�����ά������ʵ������Ҳ����Ҫȥ������������
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+
+spring:
+  application:
+    name: spring-cloud-server
