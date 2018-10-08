@@ -4,8 +4,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false  #由于我们目前创建的应用是一个服务注册中心，而不是普通的应用，默认情况下，这个应用会向注册中心（也是它自己）注册它自己，设置为false表示禁止这种默认行为
-    fetch-registry: false #表示不去检索其他的服务，因为服务注册中心本身的职责就是维护服务实例，它也不需要去检索其他服务
+    register-with-eureka: false
+    fetch-registry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
